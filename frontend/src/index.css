@@ -1,0 +1,486 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%; /* Ensure full height for flexbox layout */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+  }
+  
+  #root {
+    min-height: 100%; /* Ensure the React root takes full height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    flex: 1 0 auto; /* Allow body to grow */
+  }
+  
+  /* Container for consistent page layout */
+  .container {
+    min-height: calc(100vh - 120px); /* Adjust for navbar and footer height */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1 0 auto;
+  }
+  
+  /* Navbar Styles */
+.navbar {
+  background: #34aaa0;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links a,
+.nav-links .nav-button {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .nav-button:hover {
+  color: #1f6660;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-icon {
+  display: block;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background: #34aaa0;
+    padding: 1rem 0;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show links when open */
+  }
+
+  .nav-links a,
+  .nav-links .nav-button {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a:last-child,
+  .nav-links .nav-button:last-child {
+    border-bottom: none;
+  }
+}
+  
+  /* Footer Styles */
+ footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  flex-shrink: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+  .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Home Page Styles */
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; /* Moved from .home */
+  flex: 1 0 auto; /* Ensure it grows to fill space */
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center; /* Moved from .home */
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  text-align: center; /* Moved from .home */
+}
+  
+
+
+
+  /* About Page Styles (Adapted from Provided HTML) */
+  .about-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .container3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .container3 img {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .detail,
+  .detail1,
+  .detail3,
+  .detail4 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .detail p,
+  .detail1 p,
+  .detail3 p,
+  .detail4 p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .detail video {
+    vertical-align: middle;
+  }
+  
+  .detail2 ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  
+  .detail2 li {
+    margin: 0.5rem 0;
+  }
+  
+  .detail2 a {
+    color: #34aaa0;
+    text-decoration: none;
+  }
+  
+  .detail2 a:hover {
+    text-decoration: underline;
+  }
+  
+  .col-2 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #34aaa0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background: #0056b3;
+  }
+  
+  .detail4 img {
+    margin-top: 0.5rem;
+  }
+  
+  .line hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  /* Blog Page Styles */
+  .blog {
+    padding: 2rem;
+  }
+  
+  .blog h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog form {
+    margin-bottom: 2rem;
+  }
+  
+  .blog input,
+  .blog textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .blog textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .blog button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .blog button:hover {
+    background: #0056b3;
+  }
+  
+  .post {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    background: white;
+  }
+  
+  .post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .post em {
+    color: #666;
+  }
+  
+  /* Contact Page Styles */
+  .contact {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .contact h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact input,
+  .contact textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .contact button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact button:hover {
+    background: #0056b3;
+  }
+  
+  .contact p.success,
+  .contact p.error {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .contact p.success {
+    color: #28a745;
+  }
+  
+  .contact p.error {
+    color: #dc3545;
+  }
+  
+  /* Card Styles for Home Page */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 75px;
+  }
+  
+  .card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: calc((100% - 2rem) / 3); /* Three cards per row, accounting for 2 gaps of 1rem */
+    max-width: none; /* Remove max-width to use calculated width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+  }
+  
+  .card .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #34aaa0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .card .btn:hover {
+    background: #1f6660;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .container3 img {
+      width: 150px;
+    }
+  
+    .detail p,
+    .detail1 p,
+    .detail3 p,
+    .detail4 p {
+      font-size: 1rem;
+    }
+  
+    .detail2 ul {
+      font-size: 0.9rem;
+    }
+  
+    .home h1,
+    .blog h1,
+    .login h1,
+    .contact h1 {
+      font-size: 1.5rem;
+    }
+  
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%; /* Full width on mobile */
+      max-width: 100%;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
