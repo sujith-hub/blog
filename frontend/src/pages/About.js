@@ -30,7 +30,7 @@ const About = () => {
 
       <div className="detail">
         <p className="p2">
-          Hi there <span className="wave">👋</span>, Myself 19k4c9 Sujith
+          Hi there <span className="wave">👋</span>, Myself Sujith
         </p>
         <video
           autoPlay
